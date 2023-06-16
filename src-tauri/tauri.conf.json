@@ -6,17 +6,31 @@
     "distDir": "../build"
   },
   "package": {
-    "productName": "src-tauri",
+    "productName": "zouna-editor",
     "version": "0.1.0"
   },
   "tauri": {
     "allowlist": {
       "all": false,
       "fs": {
-        "all": true
+        "all": true,
+        "scope": ["**"]
       },
       "dialog": {
         "all": true
+      },
+      "path": {
+        "all": true
+      },
+      "window": {
+        "all": true
+      },
+      "globalShortcut": {
+        "all": true
+      },
+      "protocol": {
+        "asset": true,
+        "assetScope": ["**"]
       }
     },
     "bundle": {
@@ -34,7 +48,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tauri.dev",
+      "identifier": "com.pizzart.zouna",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
@@ -53,7 +67,7 @@
       }
     },
     "security": {
-      "csp": null
+      "csp": "default-src 'self'; img-src 'self' asset: https://asset.localhost"
     },
     "updater": {
       "active": false

@@ -42,9 +42,6 @@ declare module '$env/static/private' {
 	export const ComSpec: string;
 	export const DriverData: string;
 	export const EDITOR: string;
-	export const EFC_4348: string;
-	export const FPS_BROWSER_APP_PROFILE_STRING: string;
-	export const FPS_BROWSER_USER_PROFILE_STRING: string;
 	export const GIT_ASKPASS: string;
 	export const HOME: string;
 	export const HOMEDRIVE: string;
@@ -103,7 +100,6 @@ declare module '$env/static/private' {
 	export const RUSTUP_HOME: string;
 	export const RUSTUP_TOOLCHAIN: string;
 	export const RUST_RECURSION_COUNT: string;
-	export const SESSIONNAME: string;
 	export const SystemDrive: string;
 	export const SystemRoot: string;
 	export const TAURI_ARCH: string;
@@ -173,9 +169,6 @@ declare module '$env/dynamic/private' {
 		ComSpec: string;
 		DriverData: string;
 		EDITOR: string;
-		EFC_4348: string;
-		FPS_BROWSER_APP_PROFILE_STRING: string;
-		FPS_BROWSER_USER_PROFILE_STRING: string;
 		GIT_ASKPASS: string;
 		HOME: string;
 		HOMEDRIVE: string;
@@ -234,7 +227,6 @@ declare module '$env/dynamic/private' {
 		RUSTUP_HOME: string;
 		RUSTUP_TOOLCHAIN: string;
 		RUST_RECURSION_COUNT: string;
-		SESSIONNAME: string;
 		SystemDrive: string;
 		SystemRoot: string;
 		TAURI_ARCH: string;

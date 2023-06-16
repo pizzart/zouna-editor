@@ -11,53 +11,76 @@
 </div>
 
 <style>
+    :root {
+        --border-color: hsl(0, 15%, 25%);
+    }
+
     .container {
         max-height: 100%;
+        max-width: 100%;
         /* margin: 4px; */
-        border: 3px solid hsl(0, 15%, 20%);
+        border: 3px solid var(--border-color);
     }
 
     header {
-        background-color: hsl(0, 15%, 20%);
+        padding: 2px;
+        background-color: var(--border-color);
         color: antiquewhite;
     }
 
-    .inner {
+    :is(.game, .dpc, .imported, .properties) .inner {
         overflow-y: scroll;
         overflow-x: hidden;
-        max-height: 92%;
+        height: calc(100% - 24px);
         /* max-height: 70%; */
         display: flex;
         flex-direction: column;
     }
 
+    *::-webkit-scrollbar {
+        background-color: var(--dark-bg);
+        width: 10px;
+    }
+    *::-webkit-scrollbar-thumb {
+        background-color: var(--light-bg);
+    }
+    *::-webkit-scrollbar-thumb:hover {
+        background-color: var(--lighter-bg);
+    }
+
+    .preview .inner {
+        height: calc(100% - 24px);
+    }
+
     .game,
     .dpc,
-    .imported {
+    .imported,
+    .properties {
         overflow-y: hidden;
     }
 
     .game {
-        grid-area: left-top;
-        /* height: 1fr; */
+        grid-area: game;
     }
 
     .dpc {
-        grid-area: left-mid;
+        grid-area: dpc;
     }
 
     .imported {
-        grid-area: left-bot;
+        grid-area: imported;
     }
 
     .preview {
-        /* overflow: hidden;
-        resize: horizontal; */
-        grid-area: mid;
-        /* width: 100%; */
+        grid-area: preview;
+        overflow: hidden;
     }
 
     .properties {
-        grid-area: right;
+        grid-area: properties;
+    }
+
+    :is(.properties, .preview) .inner {
+        padding: 4px;
     }
 </style>
